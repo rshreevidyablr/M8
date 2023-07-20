@@ -1,0 +1,16 @@
+#Orthogonal System 
+from sympy import * 
+x,y=symbols ('x, y', real=True) 
+u=2*x*y # real part 
+v=x*2-y*2 #imaginary part 
+ux=diff (u, x) 
+uy=diff (u, y) 
+vx=diff (v, x) 
+vy=diff (v, y) 
+ml=-ux/uy 
+m2=-(vx/vy) 
+print("\nu=",u, "\nv=", v, "\nux=",ux, "\nuy=",uy, "\nvx=", vx, "\nvy=", vy)
+ if m1*m2 ==-1: 
+     print ('u and v are orthogonal ' 
+else:
+     print ('u and v are not orthogonal')
