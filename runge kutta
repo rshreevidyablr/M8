@@ -1,0 +1,28 @@
+#By using Runge-Kutta method, 
+solve dy/dx = x+y* *2 with y(0)=1 for x=0.2(0.2) 0.4
+from sympy import * 
+def f(x,y): 
+    return x+y* *2 
+x0=float (input (¹x0 = ¹)) 
+yo=float (input (¹y0 = ¹)) 
+xn=float (input('xn = ')) 
+h=float (input('h = ')) 
+step=int (input ('Number of steps = '))  
+def rk4 (x0, y0, xn, n): 
+    print ('\n-------------soln----------------')
+    print ('-------------------------------------------') 
+    print ('x0\ty0\tkl\tk2\tk3\tk4\tyn') 
+    print ('-------------------------')) 
+    for i in range (n): 
+        k1=h *((x0,y0))
+        k2 = h * (f((x0+h/2), (y0+k1/2))) 
+        k3= h (f((x0+h/2), (y0+k2/2))) 
+        k4h (f((x0+h), (y0+k3) ) ) 
+        k = (kl+2*k2+2*k3+k4) /6 
+        yn = y0 + k 
+        print ('%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f'% (x0, yo, k1, k2, k3, k4, yn) )
+        print ('------------------------------------------')
+        yo = yn 
+        x0 = x0+h 
+     print ('\nAt x=4.4f, y=.4f % (xn, yn)) 
+rk4 (x0, y0, xn, step) 
