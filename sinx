@@ -1,0 +1,21 @@
+#Harmonic Function
+from sympy import *
+x,y=symbols ('x, y', real=True) 
+z=symbols ('z', complex=True) 
+z=x+I*y 
+fz=sin(z)
+u=re(fz) 
+v=im(fz) #imaginary part of fz 
+ux=diff(u, x) 
+uxx=diff(ux, X) 
+uy=diff (u, y) 
+uyy=diff (uy, y) 
+vx=diff (v, x) 
+vxx=diff (vx,x) 
+vy=diff (v,y) 
+vyy=diff (vy, y) 
+print("\nfz=", fz, "\nu=", u, "\nv=",v, \nuxx=" ‚uxx, "\nuyy=",uyy, "\nvxx=", vxx, "\nvyy=",vyy)
+ if uxx+uyy=0 and vxx+vyy==0: 
+            print ('u and v are harmonic ') 
+else:
+           print('u and v are not harmonic')
